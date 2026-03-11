@@ -1,0 +1,13 @@
+GNU nano 7.2                                                                        service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ustservice
+spec:
+  type: NodePort
+  selector:
+    app: ustimage
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30002
